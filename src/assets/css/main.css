@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+@import "primeicons/primeicons.css";
+
+/* Activar de manera manual el modo oscuro de TailwindCss para Nuxt */
+@custom-variant dark (&:where(.app-dark, .app-dark *));
