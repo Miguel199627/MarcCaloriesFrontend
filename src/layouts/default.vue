@@ -1,4 +1,3 @@
-<script setup></script>
-<template scope>
+<template>
   <LayoutDefault />
 </template>

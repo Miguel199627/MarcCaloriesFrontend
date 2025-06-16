@@ -19,7 +19,7 @@ const layoutState = reactive({
 });
 
 export function useLayout() {
-  const setActiveMenuItem = (item) => {
+  const setActiveMenuItem = (item: any) => {
     layoutState.activeMenuItem = item.value || item;
   };
 
@@ -30,7 +30,7 @@ export function useLayout() {
       return;
     }
 
-    document.startViewTransition(() => executeDarkModeToggle(event));
+    document.startViewTransition(() => executeDarkModeToggle());
   };
 
   const executeDarkModeToggle = () => {
@@ -38,7 +38,7 @@ export function useLayout() {
     document.documentElement.classList.toggle("app-dark");
   };
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     if (layoutConfig.menuMode === "overlay") {
       layoutState.overlayMenuActive = !layoutState.overlayMenuActive;
     }
